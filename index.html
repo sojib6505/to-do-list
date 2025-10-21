@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBook</title>
+    <!-- ===========================daisyUI CDN =======================-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- ======================css=========================== -->
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- ================= -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="flex justify-center mb-10 mt-10">
+      <h1 class="text-6xl font-bold text-blue-600">MyBook</h1>
+    </div>
+    <div class="w-[600px] mx-auto bg-stone-200 rounded-lg p-5 shadow-lg">
+      <div class="flex items-center flex-col">
+        <p class="text-2xl font-bold">Create a new account</p>
+        <p>It's quick and easy.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="grid grid-cols-2 gap-4">
+        <!-- ================= Name Input============== -->
+        <div class="relative w-[250px]">
+          <input
+            class="w-full h-11 pl-8 pr-2 rounded-lg border focus:ring-2 focus:ring-blue-400"
+            type="text"
+            placeholder="First Name"
+          />
+          <div
+            class="absolute inset-y-0 right-2 flex items-center focus:outline-none pointer-events-none bg-red-400 w-6 h-6 flex justify-center rounded-full mt-3"
+          >
+            <i class="fa-regular fa-exclamation text-stone-100"></i>
+          </div>
+        </div>
+
+        <div class="relative">
+          <input
+            class="w-[250px] h-11 p-2 rounded-lg"
+            type="text"
+            placeholder="Last Name"
+          />
+
+          <div
+            class="absolute inset-y-0 right-8 w-6 h-6 bg-red-400 flex justify-center items-center rounded-full mt-3 pointer-events-none"
+          >
+            <i class="fa-regular fa-exclamation text-stone-100"></i>
+          </div>
+          <div></div>
+        </div>
+      </div>
+      <!-- ====================date of Birth ============================================-->
+      <div class="mt-4">
+        <p class="font-bold text-gray-500">
+          Date of birth
+          <span class="w-6 h-6 bg-gray-600 rounded-full"
+            ><i class="fa-solid fa-question text-gray-800"></i
+          ></span>
+        </p>
+        <div class="grid grid-cols-3 mt-2">
+          <input
+            class="w-40 h-11 rounded-lg p-2 mr-2"
+            type="number"
+            placeholder="Day"
+          />
+          <select class="w-40 h-11 rounded-lg p-2 mr-2">
+            <option disabled selected>Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <input
+            class="w-40 h-11 rounded-lg p-2 mr-2"
+            type="number"
+            placeholder="Year"
+          />
+        </div>
+      </div>
+      <!-- ==================== Gender========================================= -->
+      <div class="mt-5">
+        <p class="font-bold text-gray-500">Gender</p>
+        <div class="mt-2 grid grid-cols-3 gap-4">
+          <div
+            class="flex mt-2 w-40 h-10 items-center justify-between border rounded-lg"
+          >
+            <label class="flex justify-between gap-12 mx-auto" for="">
+              <div class="font-bold">Male</div>
+              <input type="radio" name="gender" />
+            </label>
+          </div>
+          <div
+            class="flex mt-2 w-40 h-10 items-center justify-between border rounded-lg"
+          >
+            <label class="flex justify-between gap-12 mx-auto" for="">
+              <div class="font-bold">Male</div>
+              <input type="radio" name="gender" />
+            </label>
+          </div>
+          <div
+            class="flex mt-2 w-40 h-10 items-center justify-between border rounded-lg"
+          >
+            <label class="flex justify-between gap-12 mx-auto" for="">
+              <div class="font-bold">Male</div>
+              <input type="radio" name="gender" />
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- ===================== -->
+      <div class="grid gap-4 mt-5">
+        <div>
+          <div class="relative">
+            <input
+              class="h-11 p-4 rounded-lg w-full"
+              type="number"
+              placeholder="Enter Your Number"
+            />
+            <div
+              class="absolute inset-y-0 right-2 flex items-center focus:outline-none pointer-events-none bg-red-400 w-6 h-6 flex justify-center rounded-full mt-3"
+            >
+              <i class="fa-regular fa-exclamation text-stone-100"></i>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <input
+            class="h-11 p-4 rounded-lg w-full"
+            type="password"
+            placeholder="Enter Your Password"
+          />
+          <div
+            class="absolute inset-y-0 right-2 flex items-center focus:outline-none pointer-events-none bg-red-400 w-6 h-6 flex justify-center rounded-full mt-3"
+          >
+            <i class="fa-regular fa-exclamation text-stone-100"></i>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 flex justify-center">
+        <button
+          class="w-[200px] bg-gray-600 py-2 font-bold text-xl rounded-2xl bg-green-800 text-white cursor-pointer"
+        >
+          Sign Up
+        </button>
+      </div>
+      <div class="mt-5 flex justify-center">
+        <p class="text-xl text-sky-500 cursor-pointer">
+          Already have an account?
+        </p>
+      </div>
+    </div>
+
+    <!-- ======================================js=========================== -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

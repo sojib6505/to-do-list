@@ -1,0 +1,6 @@
+:root{
+    --cursor: pointer;
+}
+.cursor-pointer{
+    cursor: var(--cursor);
+}
