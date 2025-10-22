@@ -5,11 +5,12 @@ document.getElementById('login-btn').addEventListener('click',function(){
     const get = JSON.parse(getData)
     const localStorageNumber = get.number;
     const localStoragePass = get.password ;
+    console.log(localStorageNumber)
     if(parseFloat(number) === parseFloat(localStorageNumber) && parseFloat(password) === parseFloat(localStoragePass)){
         window.location.href = 'profile.html'
     }
     else{
-        alert('worng')
+        alert('Wrong Number or password')
     }
 })
 

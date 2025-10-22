@@ -4,7 +4,7 @@ const div = document.createElement('div')
 div.innerHTML = `
  <div class="flex flex-col justify-center items-center bg-gray-500 w-[400px] rounded-xl">
     <p class="text-2xl font-bold">Name: ${get.fullName}</p>
- <p class="text-xl font-bold">Date of birth: ${get.day} / ${get.dateOfBirth.month} / ${get.dateOfBirth.year} </p>
+ <p class="text-xl font-bold">Date of birth: ${get.dateOfBirth.day} / ${get.dateOfBirth.month} / ${get.dateOfBirth.year} </p>
  <p class="text-xl font-bold">Phone-Number: ${get.number}</p> 
  <p class="text-xl font-bold">Gender: ${get.gender}</p> 
  </div>
