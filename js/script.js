@@ -1,15 +1,15 @@
 document.getElementById("sign-btn").addEventListener("click", function (e) {
   e.preventDefault();
-  const firstName = document.getElementById("first-name").value;
-  const lastName = document.getElementById("last-name").value;
+  const firstName = document.getElementById("first-name").value.trim();
+  const lastName = document.getElementById("last-name").value.trim();
   const fullName = firstName + " " + lastName;
-  const day = document.getElementById("day").value;
+  const day = document.getElementById("day").value.trim();
   const month = document.getElementById("month").value;
-  const year = document.getElementById("year").value;
+  const year = document.getElementById("year").value.trim();
   const gender = document.querySelectorAll('input[name="gender"]:checked')[0]
     ?.value;
-  const number = document.getElementById("number").value;
-  const password = document.getElementById("password").value;
+  const number = document.getElementById("number").value.trim();
+  const password = document.getElementById("password").value.trim();
   // ===============================First Name Validation
   if (!firstName) {
     document.getElementById("first-name-err").classList.remove("hidden");
@@ -65,6 +65,10 @@ document.getElementById("sign-btn").addEventListener("click", function (e) {
     setLocalStorageData('gender', gender);
     setLocalStorageData('number', number);
     setLocalStorageData('password', password);
+    if(firstName && lastName && day && month && year && gender && number && password){
+        window.location.href = 'login.html'
+    }
+   
 });
 
 // =================================first Name Keyup Event
@@ -126,4 +130,8 @@ const setLocalStorageData = (a , v) => {
   userData[a] = v;
   const stringifiedData = JSON.stringify(userData);
   localStorage.setItem("userData", stringifiedData);
+}
+
+const openLogin = () =>{
+  window.location.href = 'login.html'
 }
